@@ -2,8 +2,7 @@
 
 #include <stdio.h>
 
-int arr[7]; //The index of our array must definitely be a prime number.
-
+int arr[7]; 
 
 void print()
 {

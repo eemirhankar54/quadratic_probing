@@ -9,7 +9,7 @@ void print()
 	printf("\n existing elements of the array");
 	for(int i=0;i<7;i++)
 	{
-	printf("\n %d.index ==> %d",i,arr[i]);
+		printf("\n %d.index ==> %d",i,arr[i]);
 	}
 }
 
@@ -34,13 +34,13 @@ void insert(int add)
 		for(int i = 0;i < 7;i++)
 		{
 			int control = (index + i*i) % 7;
-			
 			if(arr[control] == 0)
 			{
 				arr[control] = add;
 				return;	
 			}	
 		}
+  	printf("Array is full or collision cannot be resolved.\n");
 	}
 	
 
@@ -50,10 +50,14 @@ void insert(int add)
 
 int main()
 {
-	insert(23);
+	insert(21);
 	insert(22);
-	insert(2);
+	insert(23);
+	insert(23);
+	insert(25);
+	insert(26);
+	insert(27);
+	insert(29);
 	print();
-	
 	return 0;
 }
